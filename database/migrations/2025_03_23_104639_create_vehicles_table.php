@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
+            $table->string('make');
+            $table->string('model');
+            $table->year('year');
+            $table->string('category');
+            $table->boolean('availability')->default(true);
             $table->timestamps();
         });
     }
